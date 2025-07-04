@@ -1,0 +1,34 @@
+package com.setup;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+
+import com.parameters.ConfigReader;
+
+public class BaseSteps {
+	public static WebDriver driver;
+//	public static ChromeOptions coptions;
+//	public static EdgeOptions eoptions;
+	
+	
+	public void setup(String browser) {
+		String url = ConfigReader.getProperty(browser);
+		Boolean maximize = Boolean.parseBoolean(ConfigReader.getProperty("startMaximized"));
+		Boolean disableNotif = Boolean.parseBoolean(ConfigReader.getProperty("startMaximized"));
+		
+		switch(browser.toLowerCase()) {
+		
+		case "chrome":
+			
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+
+}
