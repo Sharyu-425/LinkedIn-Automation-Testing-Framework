@@ -1,0 +1,30 @@
+package com.pages;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class LoginPageFac extends BasePage {
+	WebDriver driver;
+	@FindBy(partialLinkText="\"Sign in with email\"")
+	WebElement signInBtn;
+	@FindBy(id="username")
+	WebElement userField;
+	@FindBy(id="password")
+	WebElement passField;
+	@FindBy(css ="button[class=\\\"btn__primary--large from__button--floating\\\"]")
+	WebElement loginBtn;
+	
+	public LoginPageFac(WebDriver driver) {
+		super(driver);	
+	}
+
+	public void login(String username, String password) {
+		sendKeys(userField,username);
+		sendKeys(passField,password);
+		click(loginBtn);
+	}
+	
+
+}

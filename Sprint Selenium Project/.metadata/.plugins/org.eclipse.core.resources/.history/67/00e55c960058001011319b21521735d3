@@ -1,0 +1,14 @@
+package com.setup;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+
+public class BaseSteps {
+	public static WebDriver driver;
+	public static ChromeOptions coptions;
+	public static EdgeOptions eoptions;
+	
+	
+
+}
