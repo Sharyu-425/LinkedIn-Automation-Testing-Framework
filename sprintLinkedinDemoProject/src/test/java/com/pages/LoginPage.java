@@ -30,8 +30,6 @@ public class LoginPage extends BaseSteps {
 
     	driver.findElement(By.xpath("//button[@type='submit']")).click(); // Submit button
 
-//        driver.findElement(username).sendKeys(uname);
-//        driver.findElement(password).sendKeys(pass);
-//        driver.findElement(loginBtn).click();
+
     }
 }
