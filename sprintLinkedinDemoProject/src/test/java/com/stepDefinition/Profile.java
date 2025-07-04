@@ -1,0 +1,52 @@
+package com.stepDefinition;
+
+import com.pages.LoginPage;
+import com.parameters.ExcelReader;
+import com.setup.BaseSteps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+import org.openqa.selenium.WebDriver;
+
+public class Profile extends BaseSteps {
+
+    WebDriver driver;
+    LoginPage login;
+
+    @Given("I open the LinkedIn login page")
+    public void i_open_linkedin_login_page() {
+        loadProperties("src/test/resources/PropertieFiles/profile.properties");
+        initializeDriver();
+        driver = getDriver();
+        driver.get(prop.getProperty("url"));
+    }
+
+    @When("I login using username {string} and password {string}")
+    public void i_login_with_credentials(String userKey, String passKey) {
+        login = new LoginPage(driver);
+        
+        // Fetch actual data from Excel
+        String username = ExcelReader.getCellValue("Sheet1", 1, 0);  // You can map "User1" to Excel row
+        String password = ExcelReader.getCellValue("Sheet1", 1, 1);
+
+        login.loginToLinkedIn(username, password);
+
+        try {
+            Thread.sleep(15000);  // ✅ As per your request — 15 sec delay after login
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Then("I should see my home page")
+    public void i_should_see_homepage() {
+        String title = driver.getTitle();
+        System.out.println("Logged in, page title is: " + title);
+        // ✅ Use Assert here for validation
+        assert title.contains("LinkedIn") : "Login failed or wrong page!";
+        quitDriver();
+    }
+}
+
