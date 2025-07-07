@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="15.095">
+    <testsuite name="EMPTY_NAME" time="15.095">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="15.095">
+        <error>io.cucumber.java.PendingException: TODO: implement me&#13;
+	at com.stepDefinition.LinkedInSteps.user_launches_the_browser(LinkedInSteps.java:21)&#13;
+	at ✽.User launches the browser(file:///C:/Users/raghav/OneDrive%20-%20Capgemini/Sprint%20Selenium%20Project/seleniumSprintProject/src/test/resources/Features/Homepage.feature:5)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

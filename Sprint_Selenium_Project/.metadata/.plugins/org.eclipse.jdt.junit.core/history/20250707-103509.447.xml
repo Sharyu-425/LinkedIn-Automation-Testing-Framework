@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="7.135">
+    <testsuite name="EMPTY_NAME" time="7.135">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="7.133">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'user is on homepage' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("user is on homepage")
+public void user_is_on_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Ver" classname="EMPTY_NAME" time="0.0"/>
+    </testsuite>
+  </testsuite>
+</testrun>

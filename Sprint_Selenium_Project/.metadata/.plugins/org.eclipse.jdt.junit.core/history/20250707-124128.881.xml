@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="19.374">
+    <testsuite name="EMPTY_NAME" time="19.374">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="19.374">
+        <error>java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.getCurrentUrl()" because "this.driver" is null&#13;
+	at com.pages.LoginPageFac.isHomepage(LoginPageFac.java:30)&#13;
+	at com.stepDefinition.LinkedInSteps.user_is_navigated_to_the_homepage(LinkedInSteps.java:33)&#13;
+	at ✽.User is navigated to the Homepage(file:///C:/Users/raghav/OneDrive%20-%20Capgemini/Sprint%20Selenium%20Project/seleniumSprintProject/src/test/resources/Features/Homepage.feature:7)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

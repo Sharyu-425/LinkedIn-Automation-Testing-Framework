@@ -1,0 +1,20 @@
+io.cucumber.junit.UndefinedStepException: The step 'User performs profile searchwith an invalid keyword' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("User performs profile searchwith an invalid keyword")
+public void user_performs_profile_searchwith_an_invalid_keyword() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selects the Jobs filter")
+public void user_selects_the_jobs_filter() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("System should display a No matching jobs found message")
+public void system_should_display_a_no_matching_jobs_found_message() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

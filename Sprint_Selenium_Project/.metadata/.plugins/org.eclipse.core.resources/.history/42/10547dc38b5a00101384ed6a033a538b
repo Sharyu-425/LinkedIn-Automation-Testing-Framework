@@ -1,0 +1,15 @@
+package com.stepDefinition;
+
+import com.pages.SearchPageFac;
+import com.setup.BaseSteps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LinkedInSteps {
+	SearchPageFac searchPageFac = new SearchPageFac(BaseSteps.driver);
+	//--------------------------------------BACKGROUND-----------------------------
+
+
+}

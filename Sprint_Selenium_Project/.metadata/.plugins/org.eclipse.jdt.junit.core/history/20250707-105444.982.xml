@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="9.592">
+    <testsuite name="EMPTY_NAME" time="9.592">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="9.59">
+        <error>java.lang.NullPointerException: Cannot invoke "com.pages.SearchPageFac.isSearchResultDisplayed()" because "this.searchPageFac" is null&#13;
+	at com.stepDefinition.LinkedInSteps.user_should_see_search_results_related_to_the_keyword(LinkedInSteps.java:44)&#13;
+	at ✽.User should see search results related to the keyword(file:///C:/Users/raghav/OneDrive%20-%20Capgemini/Sprint%20Selenium%20Project/seleniumSprintProject/src/test/resources/Features/Homepage.feature:11)&#13;
+&#13;
+</error>
+      </testcase>
+      <testcase name="Ver" classname="EMPTY_NAME" time="0.001"/>
+    </testsuite>
+  </testsuite>
+</testrun>

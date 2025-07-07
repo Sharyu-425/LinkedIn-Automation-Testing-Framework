@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="14.653">
+    <testsuite name="EMPTY_NAME" time="14.653">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="14.653"/>
+    </testsuite>
+  </testsuite>
+</testrun>

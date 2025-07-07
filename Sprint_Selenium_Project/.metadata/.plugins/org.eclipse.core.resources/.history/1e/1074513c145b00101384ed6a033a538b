@@ -1,0 +1,25 @@
+Feature:
+
+
+Background:
+Given User launches the browser
+When User logs into LinkedIn with valid credentials 
+Then User is navigated to the Homepage
+
+@Search @TS_LinkedIn_01
+Scenario: Verify profile seach using LinkedIn search bar
+When User enters a valid keyword in the seach bar and presses Enter
+Then User should see search results related to the keyword
+And Relevant profiles should be displayed
+
+@Search @TS_LinkedIn_02
+Scenario: verify system response when searching with an invalid keyword
+When User performs profile searchwith an invalid keyword
+And User selects the "Jobs" filter
+Then System should display a 'No matching Jobs found' message
+
+
+
+
+
+

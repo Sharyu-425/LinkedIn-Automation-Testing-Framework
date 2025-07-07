@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="15.151">
+    <testsuite name="EMPTY_NAME" time="15.151">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="15.151">
+        <error>io.cucumber.junit.UndefinedStepException: The step 'User enters a valid keyword in the seach bar and presses Enter' is undefined.
+You can implement this step using the snippet(s) below:
+
+@When("User enters a valid keyword in the seach bar and presses Enter")
+public void user_enters_a_valid_keyword_in_the_seach_bar_and_presses_enter() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

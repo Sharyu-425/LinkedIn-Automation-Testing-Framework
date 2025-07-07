@@ -1,0 +1,49 @@
+package com.pages;
+
+
+
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+
+
+public class SearchPageFac extends BasePage {
+	
+	
+	public SearchPageFac(WebDriver driver) {
+		super(driver);
+	}
+	
+	@FindBy(xpath = "//input[@placeholder=\"Search\"]")
+	WebElement searchBar;
+	@FindBy(xpath="//h2[text()=\"On this page\"]")
+	WebElement searchPageValidator;
+	@FindBy (linkText="Capgemini")
+	WebElement Profile;
+	@FindBy(xpath="//button[text()=\"Jobs\"]")
+	WebElement jobFilter;
+	
+	public void searchForProfile(String keyword) {
+		searchBar.clear();
+		sendKeys(searchBar,keyword);
+		searchBar.sendKeys(Keys.ENTER);
+	}
+	
+	public void isSearchResultDisplayed() {
+		waitForElement(searchPageValidator);
+		Assert.assertTrue("Search is Displayed",searchPageValidator.isDisplayed());
+	}
+	
+	public void isValidProfile() {
+		waitForElement(Profile);
+		Assert.assertTrue("Valid Search Result is Displayed",Profile.isDisplayed());		
+	}
+	
+	public void applyFilter(){
+		jobFilter.click();	
+	}
+}
+
