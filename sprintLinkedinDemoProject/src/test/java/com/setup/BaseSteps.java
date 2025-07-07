@@ -11,7 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseSteps {
-    public static WebDriver driver;
+   protected static WebDriver driver;
     public static Properties prop;
 
     // Load properties file based on feature or module
