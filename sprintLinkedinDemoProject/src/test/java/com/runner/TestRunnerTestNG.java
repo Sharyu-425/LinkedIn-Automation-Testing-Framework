@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/test/resources/Features",        // Path to feature files
     glue = {"com.stepDefinition"}, 
     // Step definition package
-   tags="@tc03",
+   tags="@tc05",
     plugin = {
         "pretty",
         "html:target/CucumberReport.html",           // HTML report
