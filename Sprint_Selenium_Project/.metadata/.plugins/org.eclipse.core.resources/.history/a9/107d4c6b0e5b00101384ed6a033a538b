@@ -1,0 +1,44 @@
+package com.stepDefinition;
+
+import java.util.Map;
+
+import com.pages.LoginPageFac;
+import com.parameters.ExcelReader;
+import com.setup.BaseSteps;
+
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
+public class Hooks {
+	BaseSteps baseSteps;
+	ExcelReader reader;
+	
+	
+	@Before
+	public void launchBrowserAndLogin() {
+		baseSteps=new BaseSteps();
+		baseSteps.setup("chrome");
+		
+		try {
+			//initialize Excel reader and read credentials
+			reader =new ExcelReader("src\\test\\resources\\ExcelData\\RequiredData.xlsx");
+
+			//Perfrom login using Excel credentials
+			Map<String,String>loginData = reader.getRowData("LoginData", 1);
+			String username = loginData.get("Username");
+			String password = loginData.get("Password");			
+			LoginPageFac loginPageFac = new LoginPageFac(BaseSteps.driver);
+			loginPageFac.login(username, password);
+			
+		}catch(Exception e) {
+			System.out.print("Error in hooks during login"+e.getMessage());
+		}
+		
+	}
+	
+	@After
+	public void tearDown() {
+		baseSteps.tearDown();
+	}
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="2" started="2" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="32.51">
+    <testsuite name="LinkedIn Functional" time="32.51">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="LinkedIn Functional" time="19.425"/>
+      <testcase name="verify system response when searching with an invalid keyword" classname="LinkedIn Functional" time="13.085">
+        <error>java.lang.NullPointerException: Cannot invoke "com.pages.SearchPageFac.searchForProfile(String)" because "this.searchPageFac" is null&#13;
+	at com.stepDefinition.LinkedInSteps.user_performs_profile_search_with_an_invalid_keyword(LinkedInSteps.java:68)&#13;
+	at ✽.User performs profile search with an invalid keyword(file:///C:/Users/raghav/OneDrive%20-%20Capgemini/Sprint%20Selenium%20Project/seleniumSprintProject/src/test/resources/Features/Homepage.feature:18)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

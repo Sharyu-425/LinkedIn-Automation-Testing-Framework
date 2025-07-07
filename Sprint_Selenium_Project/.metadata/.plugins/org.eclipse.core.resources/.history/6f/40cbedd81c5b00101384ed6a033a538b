@@ -1,0 +1,85 @@
+package com.stepDefinition;
+
+import java.util.Map;
+
+
+
+import com.pages.LoginPageFac;
+import com.pages.SearchPageFac;
+import com.parameters.ExcelReader;
+import com.setup.BaseSteps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LinkedInSteps {
+	SearchPageFac searchPageFac ;
+	ExcelReader reader;
+	//--------------------------------------BACKGROUND-----------------------------
+	@Given("User launches the browser")
+	public void user_launches_the_browser() {
+		System.out.print("Browser is Launched");
+
+	}
+	@When("User logs into LinkedIn with valid credentials")
+	public void user_logs_into_linked_in_with_valid_credentials() {
+		System.out.println("Login is handled by hooks with Excel-driven data");
+
+	}
+	@Then("User is navigated to the Homepage")
+	public void user_is_navigated_to_the_homepage() {
+		
+//		LoginPageFac loginPageFac = new LoginPageFac(BaseSteps.driver);
+//		loginPageFac.isHomepage();
+	}
+
+//-------------------------------------@TS_LinkedIn_01-----------------------------------------------
+	@When("User enters a valid keyword in the seach bar and presses Enter")
+	public void user_enters_a_valid_keyword_in_the_seach_bar_and_presses_enter() {
+		 reader = new ExcelReader("src\\test\\resources\\ExcelData\\RequiredData.xlsx");
+		Map<String,String>validSearchData=reader.getRowData("Valid_Search", 1);
+		String validKeyword = validSearchData.get("SearchKeyword");
+
+		searchPageFac = new SearchPageFac(BaseSteps.driver);
+		searchPageFac.searchForProfile(validKeyword);
+	}
+
+
+	
+	@Then("User should see search results related to the keyword")
+	public void user_should_see_search_results_related_to_the_keyword() {
+		searchPageFac.isSearchResultDisplayed();
+	}
+	
+	@Then("Relevant profiles should be displayed")
+	public void relevant_profiles_should_be_displayed() {
+		searchPageFac.isValidProfile();
+	}
+//------------------------------------------------------------------------------------------
+//--------------------------------------TS_LinekdIn_02-------------------------------------------
+	
+	@When("User performs profile search with an invalid keyword")
+	public void user_performs_profile_search_with_an_invalid_keyword() {
+		reader = new ExcelReader("src\\test\\resources\\ExcelData\\RequiredData.xlsx");
+		Map<String,String>invalidSearchData = reader.getRowData("Invalid_Search", 1);
+		String invalidKeyword = invalidSearchData.get("SearchKeyword");
+		searchPageFac = new SearchPageFac(BaseSteps.driver);
+		searchPageFac.searchForProfile(invalidKeyword);
+	
+	}
+	@When("User selects the Jobs filter")
+	public void user_selects_the_jobs_filter() {
+		searchPageFac.applyFilter();
+
+	}
+	@Then("System should display a No matching jobs found message")
+	public void system_should_display_a_no_matching_jobs_found_message() {
+
+	}
+
+
+
+	
+
+}

@@ -1,0 +1,18 @@
+Feature:
+
+
+Background:
+Given user launches the browser
+When user logs into LinkedIn with valid credentials 
+Then user is on homepage
+
+@Search @TS_LinkedIn_01
+Scenario: Verify profile seach using LinkedIn search bar
+When User enters a "{Keyword}" in the seach bar and presses Enter
+Then User should see search results related to the keyword
+And Relevant profiles should be displayed
+
+@InvalidSearch @TS_LinkedIn_01
+Scenario: Ver
+
+

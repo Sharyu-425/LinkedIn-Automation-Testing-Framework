@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="5.744">
+    <testsuite name="EMPTY_NAME" time="5.744">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="EMPTY_NAME" time="5.744">
+        <error>java.lang.NullPointerException&#13;
+	at java.base/java.util.Objects.requireNonNull(Objects.java:209)&#13;
+	at java.base/java.util.ImmutableCollections$Map1.&lt;init&gt;(ImmutableCollections.java:1105)&#13;
+	at java.base/java.util.Map.of(Map.java:1353)&#13;
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:176)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:312)&#13;
+	at com.setup.BaseSteps.setup(BaseSteps.java:68)&#13;
+	at com.stepDefinition.Hooks.launchBrowserAndLogin(Hooks.java:20)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunnerJUnit" project="seleniumSprintProject" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.runner.RunnerJUnit" time="33.921">
+    <testsuite name="LinkedIn Functional" time="33.921">
+      <testcase name="Verify profile seach using LinkedIn search bar" classname="LinkedIn Functional" time="19.453"/>
+      <testcase name="verify system response when searching with an invalid keyword" classname="LinkedIn Functional" time="14.467"/>
+    </testsuite>
+  </testsuite>
+</testrun>

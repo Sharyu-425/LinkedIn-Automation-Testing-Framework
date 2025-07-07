@@ -1,0 +1,4 @@
+browser=chrome
+url=https://www.linkedin.com/login/
+startMaximized=true
+disable-notification=true

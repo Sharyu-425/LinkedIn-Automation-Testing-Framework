@@ -1,0 +1,43 @@
+package com.stepDefinition;
+
+import com.pages.SearchPageFac;
+import com.setup.BaseSteps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class LinkedInSteps {
+	SearchPageFac searchPageFac = new SearchPageFac(BaseSteps.driver);
+	//--------------------------------------BACKGROUND-----------------------------
+
+@Given("user launches the browser")
+public void user_launches_the_browser() {
+	
+
+}
+
+@Given("user logs into LinkedIn with valid credentials")
+public void user_logs_into_linked_in_with_valid_credentials() {
+
+}
+
+
+//------------------------------------------------------------------------------------
+@When("User enters a valid profile keyword in the seach bar and presses Enter")
+public void user_enters_a_valid_profile_keyword_in_the_seach_bar_and_presses_enter() {
+searchPageFac.searchForProfile(null);
+}
+@Then("User should see search results related to the keyword")
+public void user_should_see_search_results_related_to_the_keyword() {
+
+}
+@Then("Relevant profiles should be displayed")
+public void relevant_profiles_should_be_displayed() {
+
+}
+
+//-----------------------------------------------------------------------------------
+
+
+}
