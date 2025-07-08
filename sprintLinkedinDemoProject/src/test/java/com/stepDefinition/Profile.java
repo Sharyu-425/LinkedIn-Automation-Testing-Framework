@@ -5,11 +5,21 @@ import com.pages.MessagingPage;
 import com.parameters.ExcelReader;
 import com.setup.BaseSteps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.io.File;
+import java.time.Duration;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class Profile extends BaseSteps {
@@ -55,13 +65,15 @@ public class Profile extends BaseSteps {
     }
     @When("enter {string} in the search field")
     public void enter_in_the_search_field(String connection) {
-    	msgPage.searchForConnection(connection);
+    	String connFromExcel=ExcelReader.getCellValue("Sheet1", 5, 0);
+    	msgPage.searchForConnection(connFromExcel);
         
     }
 
     @When("user type {string} into the message box")
     public void user_type_into_the_message_box(String message) {
-       msgPage.enterMessage(message);
+    	String msgFromExcel=ExcelReader.getCellValue("Sheet1", 5, 1);
+       msgPage.enterMessage(msgFromExcel);
     	
     }
     @When("User click the Send button")
@@ -105,10 +117,49 @@ public class Profile extends BaseSteps {
     @When("user selects Manage settings option")
     public void user_selects_manage_settings_option() throws Exception {
        msgPage.openManageSettingsWithRobots();
+       
+//      WebDriverWait wait= new WebDriverWait(BaseSteps.driver,Duration.ofSeconds(15));
+//       wait.until(ExpectedConditions.urlContains("/mypreferences/d/categories/privacy"));
+       
+       TakesScreenshot ts=(TakesScreenshot) BaseSteps.driver;
+       File src=ts.getScreenshotAs(OutputType.FILE);
+       String destPath="screenshots/manage_settings_Afetr_Redirectpage1.png";
+       try {
+    	   FileUtils.copyFile(src, new File(destPath));
+    	   System.out.println("Screenshot captured" +destPath);
+       }catch(Exception e) {
+    	   e.printStackTrace();
+       }
     }
 
-
    
+    @When("user is on messaging window")
+    public void user_is_on_messaging_window() {
+        msgPage.clickMessagingIcon();
+    }
+    @When("user search for following names:")
+    public void user_search_for_following_names(io.cucumber.datatable.DataTable dataTable) throws Exception {
+      List<List<String>> data = dataTable.asLists();
+      String fileName=data.get(0).get(0);
+      String sheetName=data.get(0).get(1);
+      int recordCount=Integer.parseInt(data.get(0).get(2));
+      
+      int startRow=8;
+      
+        for(int i=startRow;i<startRow+recordCount;i++) {
+        	String name=ExcelReader.getCellValue(sheetName, i, 0);
+        			msgPage.searchMessage(name);
+        }
+    }
+    
+    @Then("each name should appear in the search result")
+    public void each_name_should_appear_in_the_search_result(io.cucumber.datatable.DataTable dataTable) {
+    	List<String> names=dataTable.column(0);
+        for(String name: names) {
+        	Assert.assertTrue(msgPage.isSearchedNameDisplayed(name));
+        }
+    }
+
 
     
    
