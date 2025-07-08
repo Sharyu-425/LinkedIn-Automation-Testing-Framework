@@ -6,15 +6,16 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/Features",
     glue = {"com.stepDefinition", "com.setup"},
-    tags = "@SendConnection",
+    //tags = "@SendConnection or @WithdrawRequest",
+    tags = "@AcceptIgnoreRequest ",
     plugin = {
         "pretty",
-        "html:target/CucumberReports/SendConnectionReport.html",
-        "json:target/CucumberReports/SendConnectionReport.json",
+        "html:target/CucumberReports/ProfileReport.html",
+        "json:target/CucumberReports/ProfileReport.json",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
     },
     monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
-    // Executes Cucumber scenarios using TestNG
+    // Executes both scenarios sequentially
 }
