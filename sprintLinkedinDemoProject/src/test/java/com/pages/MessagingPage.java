@@ -40,6 +40,10 @@ public class MessagingPage {
  
     @FindBy(xpath="//button[@aria-label='See more messaging options' and @type='button']")
     WebElement threeDotsMenu;
+    
+    
+    @FindBy(xpath="//input[@placeholder='Search messages']")
+	WebElement messageSearchBox;
 	
 	public MessagingPage(WebDriver driver) {
 		this.driver=driver;
@@ -171,18 +175,7 @@ public class MessagingPage {
 	    option.click();
 	}
 	
-//	public void clickByText(String visibleText) {
-//	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//	    WebElement item = wait.until(ExpectedConditions.elementToBeClickable(
-//	        By.xpath("//*[text()='" + visibleText + "']")));
-//	    item.click();
-//	}
-//	public void clickToggleOption(String toggleText) {
-//	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//	    WebElement toggle = wait.until(ExpectedConditions.elementToBeClickable(
-//	        By.xpath("//label[contains(text(),'" + toggleText + "')]")));
-//	    toggle.click();
-//	}
+
 
 
 	public void clickManageSettings() throws Exception {
@@ -210,4 +203,23 @@ public class MessagingPage {
 		clickManageSettings();
 	}
 	
+
+	
+	public void searchMessage(String name) throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.visibilityOf(messageSearchBox)).clear();
+		messageSearchBox.sendKeys(name + Keys.ENTER);
+		Thread.sleep(1000);
+	}
+	
+	public boolean isSearchedNameDisplayed(String name) {
+		
+		String dynamicpath="//span[contains(text(),'"+ name + "')]";
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+    return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(dynamicpath))).isDisplayed();
+
+	
+	
+	
+}
 }
