@@ -23,8 +23,10 @@ public class SearchPageFac extends BasePage {
 	WebElement searchPageValidator;
 	@FindBy (linkText="Capgemini")
 	WebElement Profile;
-	@FindBy(xpath="//button[text()=\"Jobs\"]")
+	@FindBy(xpath="//div[@class=\"wIsRjMHLuluBexAtOEJvVQIAYPvoGkaQ\"]/child::*[2]/child::div[1]")
 	WebElement jobFilter;
+	@FindBy(xpath="p[class=\"t-24 t-black t-normal text-align-center\"]")
+	WebElement noResultError;
 	
 	public void searchForProfile(String keyword) {
 		searchBar.clear();
@@ -36,14 +38,15 @@ public class SearchPageFac extends BasePage {
 		waitForElement(searchPageValidator);
 		Assert.assertTrue("Search is Displayed",searchPageValidator.isDisplayed());
 	}
-	
-	public void isValidProfile() {
-		waitForElement(Profile);
-		Assert.assertTrue("Valid Search Result is Displayed",Profile.isDisplayed());		
+	public void profileClick() {
+		Profile.click();
 	}
 	
 	public void applyFilter(){
 		jobFilter.click();	
+	}
+	public void errorDisplayed() {
+		assertElementText(noResultError,"No matching jobs found.","Invalid search Error is not Displayed");
 	}
 }
 
