@@ -13,9 +13,16 @@ public class ScreenshotUtil {
     public static String takeScreenshot(WebDriver driver, String prefix) {
         try {
             // Create screenshots directory if it doesn't exist
-            File screenshotDir = new File("target/screenshots");
-            if (!screenshotDir.exists()) {
-                screenshotDir.mkdirs();
+//            File screenshotDir = new File("/screenshots");
+//            if (!screenshotDir.exists()) {
+//                screenshotDir.mkdirs();
+
+// Save to project root /screenshot
+        	String screenshotPath = System.getProperty("user.dir") + "/screenshot";
+        	File screenshotDir = new File(screenshotPath);
+        	if (!screenshotDir.exists()) {
+        		screenshotDir.mkdirs();
+
             }
 
             // Capture screenshot
