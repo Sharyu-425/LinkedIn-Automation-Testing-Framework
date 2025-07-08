@@ -2,9 +2,10 @@ package com.stepDefinition;
 
 import java.util.Map;
 
-
-
+import com.pages.AccPreferancePageFac;
+import com.pages.HomePageFac;
 import com.pages.LoginPageFac;
+import com.pages.ProfilePageFac;
 import com.pages.SearchPageFac;
 import com.parameters.ExcelReader;
 import com.setup.BaseSteps;
@@ -16,6 +17,9 @@ import io.cucumber.java.en.When;
 public class LinkedInSteps {
 	SearchPageFac searchPageFac ;
 	ExcelReader reader;
+	ProfilePageFac profilePageFac;
+	HomePageFac homePageFac;
+	AccPreferancePageFac accPreferancePageFac;
 	//--------------------------------------BACKGROUND-----------------------------
 	@Given("User launches the browser")
 	public void user_launches_the_browser() {
@@ -31,8 +35,8 @@ public class LinkedInSteps {
 	@Then("User is navigated to the Homepage")
 	public void user_is_navigated_to_the_homepage() {
 		
-//		LoginPageFac loginPageFac = new LoginPageFac(BaseSteps.driver);
-//		loginPageFac.isHomepage();
+		LoginPageFac loginPageFac = new LoginPageFac(BaseSteps.driver);
+		loginPageFac.isHomepage();
 	}
 
 //-------------------------------------@TS_LinkedIn_01-----------------------------------------------
@@ -48,15 +52,21 @@ public class LinkedInSteps {
 		searchPageFac.searchForProfile(validKeyword);
 		
 	}
-	@Then("User should see search results related to the keyword")
-	public void user_should_see_search_results_related_to_the_keyword() {
-		searchPageFac.isSearchResultDisplayed();
+	@When("User clicks on the first profile result")
+	public void user_clicks_on_the_first_profile_result() {
+		searchPageFac.profileClick();
 	}
-	
-	@Then("Relevant profiles should be displayed")
-	public void relevant_profiles_should_be_displayed() {
-		searchPageFac.isValidProfile();
+	@When("User follows the selected profile")
+	public void user_follows_the_selected_profile() {
+		profilePageFac = new ProfilePageFac(BaseSteps.driver);
+		profilePageFac.clickFollow();		
+		
 	}
+	@Then("User should see the profile as followed")
+	public void user_should_see_the_profile_as_followed() {
+		profilePageFac.isFollowing();
+	}
+
 //------------------------------------------------------------------------------------------
 //--------------------------------------TS_LinekdIn_02-------------------------------------------
 	
@@ -77,11 +87,69 @@ public class LinkedInSteps {
 	}
 	@Then("System should display a No matching jobs found message")
 	public void system_should_display_a_no_matching_jobs_found_message() {
-
+		searchPageFac.errorDisplayed();
 	}
-
-
-
 	
+	
+//-----------------------------------------------------------------------------------------------------------
+	
+//-------------------------------------TS_LinkedIn_03------------------------------------------------------
+	
+
+@When("User click on the post textbox on the homepage")
+public void user_click_on_the_post_textbox_on_the_homepage() {
+	homePageFac = new HomePageFac(BaseSteps.driver);
+	homePageFac.clickCreatePost();
+}
+@When("User enters valid content into the field and clicks on post button")
+public void user_enters_valid_content_into_the_field_and_clicks_on_post_button() throws InterruptedException {
+	homePageFac.createPost();
+	Thread.sleep(3000);
+}
+@Then("the post should be successfully shared on the feed")
+public void the_post_should_be_successfully_shared_on_the_feed() {
+	homePageFac.isPosted();
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+
+//-----------------------------------------TS_LinkedIn_04---------------------------------------------------------------
+	
+
+@When("User attemps to post the same content again")
+public void user_attemps_to_post_the_same_content_again() {
+	homePageFac = new HomePageFac(BaseSteps.driver);
+	homePageFac.clickCreatePost();
+	homePageFac.createPost();
+}
+@Then("Duplicate post warning should be displayed")
+public void duplicate_post_warning_should_be_displayed() throws InterruptedException {
+	homePageFac.isDuplicateErrorDisplayed();
+	Thread.sleep(4000);
+}
+
+//------------------------------------------------------------------------------------------------------------------------
+
+//---------------------------------------TS_LinkedIn_05---------------------------------------------------------------------------------------------
+
+@When("User navigates to Dark Mode in Settings & Privacy page")
+public void user_navigates_to_dark_mode_in_settings_privacy_page() throws InterruptedException {
+	homePageFac = new HomePageFac(BaseSteps.driver);	
+	homePageFac.goToSettings();
+	Thread.sleep(4000);
+	accPreferancePageFac = new AccPreferancePageFac(BaseSteps.driver);
+	accPreferancePageFac.goToDarkModeSetting();
+	
+	
+}
+@When("User switches the mode to the opposite of the current selection")
+public void user_switches_the_mode_to_the_opposite_of_the_current_selection() {
+	accPreferancePageFac.toggleDarkMode();
+}
+@Then("New Dark Mode setting should be applied")
+public void new_dark_mode_setting_should_be_applied() {
+	
+
+}
 
 }

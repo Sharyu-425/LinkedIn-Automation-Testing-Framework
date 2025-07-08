@@ -12,6 +12,8 @@ public class LoginPageFac extends BasePage {
 	WebElement passField;
 	@FindBy(css ="button[class=\"btn__primary--large from__button--floating\"]")
 	WebElement loginBtn;
+//	@FindBy(css="button[class=\"sc-nkuzb1-0 sc-d5trka-0 eZxMRy button\"]")
+//	WebElement startPuzzleBtn;
 
 	
 	public LoginPageFac(WebDriver driver) {
@@ -22,11 +24,14 @@ public class LoginPageFac extends BasePage {
 		sendKeys(userField,username);
 		sendKeys(passField,password);
 		loginBtn.click();
+//		waitForElement(startPuzzleBtn);
+//		startPuzzleBtn.click();
+		
 		Thread.sleep(10000);
 	}
-//	public void isHomepage() {
-//		Assert.assertTrue("Feed page not displayed after login",driver.getCurrentUrl().contains("feed"));
-//	}
+	public void isHomepage() {
+		assertURL("feed","Feed page not displayed after login");
+	}
 	
 
 }
