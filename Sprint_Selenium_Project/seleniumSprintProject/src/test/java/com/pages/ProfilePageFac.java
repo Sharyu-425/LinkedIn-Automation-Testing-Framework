@@ -7,10 +7,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProfilePageFac extends BasePage {
 	
-	@FindBy(css="button[aria-label=\"Follow\"]")
-	WebElement followBtn;
+	@FindBy(xpath="//div[@class=\"org-top-card-primary-actions__inner\"]/button/span")
+	WebElement followOrUnfollowBtn;
 	@FindBy(xpath="//span[text()=\"Following\"]")
 	WebElement followingBtn;
+	@FindBy(xpath="//span[text()=\"Unfollow\"]")
+	WebElement unfollowBtn;
+	
 
 	
 	public ProfilePageFac(WebDriver driver) {
@@ -18,11 +21,23 @@ public class ProfilePageFac extends BasePage {
 	}
 	
 	public void clickFollow() {
-		followBtn.click();		
+		if(followOrUnfollowBtn.getText().equalsIgnoreCase("follow")) {
+			click(followOrUnfollowBtn);
+		}else if(followOrUnfollowBtn.getText().equalsIgnoreCase("following")) {
+			click(followOrUnfollowBtn);
+			click(unfollowBtn);
+		}
+			
 	}
 	
-	public void isFollowing() {
-		assertElementIsDisplayed(followingBtn,"Follow Unseccessful");
+	public void isFollowingOrFollow() {
+		if(followOrUnfollowBtn.getText().equalsIgnoreCase("follow")) {
+		assertElementIsDisplayed(followOrUnfollowBtn,"Unfollow Done");
+		}
+		else if(followOrUnfollowBtn.getText().equalsIgnoreCase("following")) {
+			assertElementIsDisplayed(followOrUnfollowBtn,"Follow Done");
+		}
+		
 	}
 	
 	

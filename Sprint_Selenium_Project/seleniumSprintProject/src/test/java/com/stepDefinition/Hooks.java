@@ -2,6 +2,7 @@ package com.stepDefinition;
 
 import java.util.Map;
 
+import com.pages.BasePage;
 import com.pages.LoginPageFac;
 import com.parameters.ConfigReader;
 import com.parameters.ExcelReader;
@@ -9,6 +10,7 @@ import com.setup.BaseSteps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class Hooks {
 	BaseSteps baseSteps;
@@ -38,8 +40,16 @@ public class Hooks {
 	}
 	
 	@After
-	public void tearDown() {
-		baseSteps.tearDown();
+	public void tearDown(Scenario scenario) {
+		if(scenario.isFailed()) {
+			//take screenshot when failed
+		String scenarioName = scenario.getName().replaceAll(" ","_");
+		//
+		BasePage basePage = new BasePage(BaseSteps.driver);
+		basePage.takeScreenshot(scenarioName+"_FAILED!");
+		}
+		if(BaseSteps.driver!=null) {
+			BaseSteps.driver.quit();
+		}
 	}
-
 }

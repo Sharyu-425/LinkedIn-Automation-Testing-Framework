@@ -1,5 +1,6 @@
 package com.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,11 +16,8 @@ public class AccPreferancePageFac extends BasePage {
 	WebElement alwaysOnRadio;
 	@FindBy(xpath="//label[text()=\"Always off\"]")
 	WebElement alwaysOffRadio;
-	
-	
-	
-	
-	
+	@FindBy(xpath="//div[@data-test-checked-radio-button]")
+	WebElement selectedRadio;
 	
 	
 	public void goToDarkModeSetting() {
@@ -35,7 +33,7 @@ public class AccPreferancePageFac extends BasePage {
 	}
 	
 	public void isModeChanged() {
-		
+		Assert.assertNotNull("No radio button is selected",selectedRadio );
 	}
 	
 	
