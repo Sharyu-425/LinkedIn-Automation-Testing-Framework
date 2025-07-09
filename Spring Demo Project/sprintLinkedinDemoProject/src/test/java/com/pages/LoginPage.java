@@ -1,0 +1,35 @@
+package com.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.setup.BaseSteps;
+
+public class LoginPage extends BaseSteps {
+
+    WebDriver driver;
+
+    // Constructor to access driver
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    // Get locators from property file
+    By username = By.id(prop.getProperty("login.username.id"));
+    By password = By.cssSelector(prop.getProperty("login.password.css"));
+    By loginBtn = By.xpath(prop.getProperty("login.submit.xpath"));
+
+    // Login Action
+    public void loginToLinkedIn(String uname, String pass) {
+    	WebElement emailInput = driver.findElement(By.id("username"));  // For LinkedIn email field
+    	emailInput.sendKeys(uname);
+
+    	WebElement passwordInput = driver.findElement(By.id("password")); // LinkedIn password field
+    	passwordInput.sendKeys(pass);
+
+    	driver.findElement(By.xpath("//button[@type='submit']")).click(); // Submit button
+
+
+    }
+}

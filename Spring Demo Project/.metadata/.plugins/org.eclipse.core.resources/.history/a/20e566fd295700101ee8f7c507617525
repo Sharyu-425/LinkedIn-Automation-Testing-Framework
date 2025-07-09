@@ -1,0 +1,5 @@
+url=https://www.linkedin.com/login
+browser=chrome
+login.username.id=shayumalshette@gmail.com
+login.password.css=M@rsi03101
+login.submit.xpath=/button[@type='submit']
