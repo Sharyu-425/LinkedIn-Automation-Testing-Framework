@@ -16,6 +16,9 @@ public class EditIntroPage extends BasePage{
     @FindBy(xpath ="//button[@data-view-name='profile-form-save']")
     WebElement savebtn;
     
+    @FindBy(xpath ="//div[@class='artdeco-inline-feedback artdeco-inline-feedback--error ember-view mt1']")
+    WebElement errorMessage;
+    
 	public EditIntroPage(WebDriver driver) {
 		super(driver);
 	}
@@ -41,4 +44,13 @@ public class EditIntroPage extends BasePage{
 	public void save() {
 		savebtn.click();
 	}
+	
+	public boolean alert() {
+    	if(errorMessage.isDisplayed()) {
+    		return true;
+    	}else {
+    	return false;
+    	}
+    }
+    
 }

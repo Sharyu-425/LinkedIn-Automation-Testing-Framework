@@ -36,7 +36,7 @@ public class LoginPage extends BasePage{
 	public void clickbtn(){
 		logbtn.click();
 		try {
-			Thread.sleep(15000);
+			Thread.sleep(30000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
