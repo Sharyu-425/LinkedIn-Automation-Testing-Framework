@@ -16,7 +16,7 @@ public class Hooks extends BaseSteps {
 	
 	@Before
 	public void setupAndLogin() throws InterruptedException {
-		loadProperties("C:\\Users\\BHAGADE\\Documents\\Submmition Project\\SprintLinkedInProject\\Spring Demo Project\\sprintLinkedinDemoProject\\src\\test\\resources\\PropertieFiles\\profile.properties");
+		loadProperties("src\\test\\resources\\PropertieFiles\\linkedin.properties");
 		initializeDriver();
 		driver=getDriver();
 		driver.get(prop.getProperty("url"));
