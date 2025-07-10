@@ -102,108 +102,93 @@ public class ExcelReader {
 	}
 
 
-//	public String[] provideAbout(String about, String skills) {
-//	    String path = "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\LinkedInAutomation\\src\\test\\resource\\ExcelData\\FormData.xlsx";
-//	    String[] userAbout = about.split("");
-//	    String[] userSkills = skills.split("");
-//	    
-// 
-//	    int userAboutRow = Integer.parseInt(userAbout[0]);
-//	    int userAboutCell = Integer.parseInt(userAbout[1]);
-//	    
-//	    int userSkillsRow = Integer.parseInt(userSkills[0]);
-//	    int userSkillsCell = Integer.parseInt(userSkills[1]);
-// 
-//	    String[] data = new String[2];
-//	    FileInputStream fis = null;
-//	    XSSFWorkbook workbook = null;
-// 
-//	    try {
-//	        fis = new FileInputStream(path);
-//	        workbook = new XSSFWorkbook(fis);
-//	        Sheet excel = workbook.getSheetAt(0);
-//	        data[0] = excel.getRow(userAboutRow).getCell(userAboutCell).getStringCellValue();
-//	        data[1] = excel.getRow(userSkillsRow).getCell(userSkillsCell).getStringCellValue();
-//	    } catch (FileNotFoundException e) {
-//	        e.printStackTrace();
-//	    } catch (IOException e) {
-//	        e.printStackTrace();
-//	    } finally {
-//	        try {
-//	            if (workbook != null) {
-//	                workbook.close();
-//	            }
-//	            if (fis != null) {
-//	                fis.close();
-//	            }
-//	        } catch (IOException e) {
-//	            e.printStackTrace();
-//	        }
-//	    }
-// 
-//	    return data;
-//	}
- 
-	
-	public String[] userDetailsReader(String projectName, String description, String skills, String title, String linkDescription, String contributors) {
-		String path="C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\LinkedInAutomation\\src\\test\\resource\\ExcelData\\FormData.xlsx";
-		String[] userProjectName = projectName.split("");
-	    String[] projectDescription = description.split("");
-	    String[] skillsUsed = skills.split("");
-	    String[] projectTitle = title.split("");
-	    String[] describeLink = linkDescription.split("");
-	    String[] projectContributors = contributors.split("");
-
- 
-	    int userProjectNameRow = Integer.parseInt(userProjectName[0]);
-	    int userProjectNameCell = Integer.parseInt(userProjectName[1]);
-	    
-	    int projectDescriptionRow = Integer.parseInt(projectDescription[0]);
-	    int projectDescriptionCell = Integer.parseInt(projectDescription[1]);
-	    
-	    int skillsUsedRow = Integer.parseInt(skillsUsed[0]);
-	    int skillsUsedCell = Integer.parseInt(skillsUsed[1]);
-	    
-	    int projectTitleRow = Integer.parseInt(projectTitle[0]);
-	    int projectTitleCell = Integer.parseInt(projectTitle[1]);
-	    
-	    int describeLinkRow = Integer.parseInt(describeLink[0]);
-	    int describeLinkCell = Integer.parseInt(describeLink[1]);
-	    
-	    int projectContributorsRow = Integer.parseInt(projectContributors[0]);
-	    int projectContributorsCell = Integer.parseInt(projectContributors[1]);
- 
-	    String[] data = new String[6];
-	    FileInputStream fis = null;
+	public String[] provideAbout(String filename) {
+	    String path = "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\LinkedInAutomation\\src\\test\\resource\\ExcelData\\"+filename;
+		String userAbout[]=new String[4];
+		File file=new File(path);
+		FileInputStream fis = null;
 	    XSSFWorkbook workbook = null;
  
-	    try {
-	        fis = new FileInputStream(path);
-	        workbook = new XSSFWorkbook(fis);
-	        Sheet excel = workbook.getSheetAt(0);
-	        data[0] = excel.getRow(userProjectNameRow).getCell(userProjectNameCell).getStringCellValue();
-	        data[1] = excel.getRow(projectDescriptionRow).getCell(projectDescriptionCell).getStringCellValue();
-	        data[2] = excel.getRow(skillsUsedRow).getCell(skillsUsedCell).getStringCellValue();
-	        data[3] = excel.getRow(projectTitleRow).getCell(projectTitleCell).getStringCellValue();
-	        data[4] = excel.getRow(describeLinkRow).getCell(describeLinkCell).getStringCellValue();
-	        data[5] = excel.getRow(projectContributorsRow).getCell(projectContributorsCell).getStringCellValue();
-	    } catch (FileNotFoundException e) {
-	        e.printStackTrace();
-	    } catch (IOException e) {
-	        e.printStackTrace();
-	    } finally {
-	        try {
-	            if (workbook != null) {
-	                workbook.close();
-	            }
-	            if (fis != null) {
-	                fis.close();
-	            }
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
+		try {
+			fis = new FileInputStream(file);
+			workbook = new XSSFWorkbook(fis);
+			Sheet excel= workbook.getSheetAt(0);
+			userAbout[0]= excel.getRow(4).getCell(0).getStringCellValue();
+			userAbout[1]= excel.getRow(6).getCell(0).getStringCellValue();
+			userAbout[2]= excel.getRow(5).getCell(0).getStringCellValue();
+			userAbout[3]= excel.getRow(6).getCell(0).getStringCellValue();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			workbook.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return userAbout;
+	}
  
-	    return data;
+	
+	public String[] getProjectDetails(String filename) {
+		String path = "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\LinkedInAutomation\\src\\test\\resource\\ExcelData\\"+filename;
+		String userProject[]=new String[6];
+		File file=new File(path);
+		FileInputStream fis = null;
+	    XSSFWorkbook workbook = null;
+ 
+		try {
+			fis = new FileInputStream(file);
+			workbook = new XSSFWorkbook(fis);
+			Sheet excel= workbook.getSheetAt(0);
+			userProject[0]= excel.getRow(7).getCell(0).getStringCellValue();
+			userProject[1]= excel.getRow(8).getCell(0).getStringCellValue();
+			userProject[2]= excel.getRow(6).getCell(0).getStringCellValue();
+			userProject[3]= excel.getRow(9).getCell(0).getStringCellValue();
+			userProject[4]= excel.getRow(9).getCell(1).getStringCellValue();
+			userProject[5]= excel.getRow(9).getCell(2).getStringCellValue();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			workbook.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return userProject;		
+}
+	public String[] getVolunteerExperienceDetails(String filename) {
+		String path = "C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\LinkedInAutomation\\src\\test\\resource\\ExcelData\\"+filename;
+		String userExperience[]=new String[3];
+		File file=new File(path);
+		FileInputStream fis = null;
+	    XSSFWorkbook workbook = null;
+ 
+		try {
+			fis = new FileInputStream(file);
+			workbook = new XSSFWorkbook(fis);
+			Sheet excel= workbook.getSheetAt(0);
+			userExperience[0]= excel.getRow(0).getCell(3).getStringCellValue();
+			userExperience[1]= excel.getRow(1).getCell(3).getStringCellValue();
+			userExperience[2]= excel.getRow(2).getCell(3).getStringCellValue();
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			workbook.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return userExperience;		
 }
 }
+

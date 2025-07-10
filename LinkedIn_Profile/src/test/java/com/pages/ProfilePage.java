@@ -60,7 +60,6 @@ public class ProfilePage extends BasePage{
 			robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 			robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 		} catch (AWTException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -75,24 +74,19 @@ public class ProfilePage extends BasePage{
 			robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
 			robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
 		} catch (AWTException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-//    	waitUntilElementIsClickable(addAboutSection);
-//    	addAboutSection.click();
+
     }
     
     public void recommendedDropdown() {
     	coreDropdown.click();
     	action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-//    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", recommendedDropdown);
-//        recommendedDropdown.click();	
+
     }
     
     public void addProjects() {
     	action.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-//        addProjectsSection.click();
     }
     
     public void additionalDropdown() {
@@ -106,17 +100,6 @@ public class ProfilePage extends BasePage{
 	
 	public void openToWork() {
 		js.executeScript("window.scrollBy(0,200)");
-//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", openToWork);
-//		Robot robot;
-//		try {
-//			robot = new Robot();
-//			robot.mouseMove(250, 600);
-//			robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-//			robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-//		} catch (AWTException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		openToWork.click();
 		
 	}

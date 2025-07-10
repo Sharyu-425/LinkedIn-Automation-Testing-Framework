@@ -27,9 +27,6 @@ public class AddProjectPage extends BasePage {
     @FindBy(id = "media-dropdown-trigger")
     WebElement mediaField;
 
-//    @FindBy(css = ".artdeco-dropdown__content.artdeco-dropdown--is-dropdown-element.artdeco-dropdown__content--justification-left.artdeco-dropdown__content--placement-bottom.ember-view.p0")
-//    WebElement addALinkField;
-
     @FindBy(css = ".pe-treasury-link__input")
     WebElement linkField;
 
@@ -72,13 +69,18 @@ public class AddProjectPage extends BasePage {
     	projectNameField.sendKeys(projectName);
     	descriptionField.click();
     	action.sendKeys(description).build().perform();
-//    	waitUntilElementIsClickable(skills);
-    	action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(skills).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
-    	js.executeScript("window.scrollBy(0,100)");
-    //	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", media);
+    	waitUntilElementIsClickable(skillsField);
+    	action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(skills).build().perform();
+    	action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", mediaField);
     	mediaField.click();
+    	 try {
+ 			Thread.sleep(2000);
+ 		} catch (InterruptedException e1) {
+ 			e1.printStackTrace();
+ 		}
         action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-        waitUntilElementIsClickable(linkField);
+        waitUntilWebElementIsVisible(linkField);
         linkField.sendKeys("https://www.linkedin.com");
         addButton.click();
         waitUntilWebElementIsVisible(titleField);
@@ -87,11 +89,7 @@ public class AddProjectPage extends BasePage {
         linkDescriptionField.sendKeys(linkDescription);
         applyButton.click();
         action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-   // 	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", currentlyWorking);
- //       waitUntilElementIsClickable(currentlyWorking);
-//        js.executeScript("window.scrollBy(0,100)");
         action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
-//        currentlyWorking.click();
         action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
         month.click();
         action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();

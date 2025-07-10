@@ -12,10 +12,10 @@ public class AddVolunteerExperiencePage extends BasePage{
 	Actions action;
 	
 	@FindBy(xpath ="//input[@placeholder='Ex: Red Cross']")
-    WebElement organization;
+    WebElement organizationField;
 
     @FindBy(xpath ="//input[@placeholder='Ex: Fundraising Volunteer']")
-    WebElement role;
+    WebElement roleField;
     
     @FindBy(xpath ="//option[@value ='Science and Technology']")
     WebElement cause;
@@ -26,9 +26,6 @@ public class AddVolunteerExperiencePage extends BasePage{
     @FindBy(xpath ="//select[@name='month']")
     WebElement month;
     
-//    @FindBy(xpath ="//option[@value='7']")
-//    WebElement month;
-    
     @FindBy(xpath ="//option[@value='2025']")
     WebElement year;
     
@@ -37,29 +34,39 @@ public class AddVolunteerExperiencePage extends BasePage{
     
     @FindBy(css = ".artdeco-button.artdeco-button--2.artdeco-button--primary.ember-view")
     WebElement saveBtn;
-
+    
+    @FindBy(xpath = "//div[@class='artdeco-modal artdeco-modal--layer-default pe-edit-form-page__modal']")
+    WebElement updated;
 
 	public AddVolunteerExperiencePage(WebDriver driver) {
 		super(driver);
 		this.action = new Actions(driver);
 	}
 	
-	public void addValidData() {
-		waitUntilElementIsClickable(organization);
-		organization.sendKeys("Tata Consultancy Services");
-		role.sendKeys("Pragati: Path to Future");
+	public void addValidData(String organization, String role, String description) {
+		waitUntilElementIsClickable(organizationField);
+		organizationField.sendKeys(organization);
+		roleField.sendKeys(role);
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 		cause.click();
 		currentlyVol.click();
-//		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 		waitUntilElementIsClickable(month);
 		Select select = new Select(month);
 		select.selectByValue("7");
 		month.click();
 		action.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 		year.click();
-		descri.sendKeys("Volunteered in TCS program 'Pragati: Path to Future'.");
+		descri.sendKeys(description);
 		saveBtn.click();
 	}
+	
+	public boolean successfulUpdate() {
+    	waitUntilWebElementIsVisible(updated);
+    	if(updated.isDisplayed()) {
+    		return true;
+    	}else {
+    		return false;
+    	}
+    }
 
 }
