@@ -12,9 +12,10 @@ plugin= {
 		"pretty",
 },
 monochrome=true,
-tags="@LinkedIn")
+tags="@TS_LinkedIn_02")
 //,plugin=)
 public class RunnerJUnit {
+
 	
 }
 

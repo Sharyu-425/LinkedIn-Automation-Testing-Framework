@@ -32,7 +32,7 @@ public class SearchPageFac extends BasePage {
 	@FindBy(css="p[class=\"t-24 t-black t-normal text-align-center\"]")
 	WebElement noResultError;
 	@FindAll({
-		@FindBy(xpath="//div[@data-view-name=\"job-card\"]/descendant::div[2]/div[2]/div[2]/span")
+		@FindBy(xpath="//ul[@class=\"YKRAYdObqkMyyrFNGgdKfQDJDiTDWQ\"]/li/div/div/div[1]/div[1]/div[2]/div[2]/span")
 	})List<WebElement>CompanyName;
 	
 	public void searchForProfile(String keyword) {
@@ -56,17 +56,22 @@ public class SearchPageFac extends BasePage {
 		assertElementText(noResultError,"No matching jobs found.","Invalid search Error is not Displayed");
 	}
 	
+	
 	public List<String>getAllJobCompanyNames(){
 		List<String> companies = new ArrayList<>();
 		for(WebElement company: CompanyName) {
 			if(company.isDisplayed()) {
 				companies.add(company.getText().trim());
+				System.out.println(company.getText());
 			}
 		}
 		return companies;
 	}
+	
+	
 
 	public void jobIsDisplayed() {
+		
 		List<String>companies = getAllJobCompanyNames();
 		Assert.assertFalse("No job is Listed",companies.isEmpty());
 	}

@@ -1,12 +1,13 @@
 package com.setup;
 
 import java.time.Duration;
+import java.util.Collections;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-
+import org.openqa.selenium.edge.EdgeOptions;
 
 import com.pages.BasePage;
 import com.parameters.ConfigReader;
@@ -17,40 +18,44 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseSteps {
 	public static WebDriver driver;
 
-	
-	
-	
-
 	public void setup(String browser) {
 		String url = ConfigReader.getProperty("url");
 		Boolean maximize = Boolean.parseBoolean(ConfigReader.getProperty("start-Maximized"));
 		Boolean disableNotif = Boolean.parseBoolean(ConfigReader.getProperty("disable-notification"));
-		
-		switch(browser.toLowerCase()) {
-		
+		Boolean incognito = Boolean.parseBoolean(ConfigReader.getProperty("incognito"));
+		switch (browser.toLowerCase()) {
+
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
-			
-			if(maximize) {
+
+			if (maximize) {
 				chromeOptions.addArguments("--start-maximized");
 			}
-			if(disableNotif) {
+			if (disableNotif) {
 				chromeOptions.addArguments("--disable-notifications");
 			}
-			driver=new ChromeDriver(chromeOptions);
+			if (incognito) {
+				chromeOptions.addArguments("--incognito");
+			}
+
+
+			driver = new ChromeDriver(chromeOptions);
 			break;
-			
-			
-		case"edge":
-			
+
+		case "edge":
+
 			WebDriverManager.edgedriver().setup();
-			driver=new EdgeDriver();
-			if(maximize) {
+			driver = new EdgeDriver();
+			EdgeOptions edgeOptions = new EdgeOptions();
+			if (maximize) {
 				driver.manage().window().maximize();
 			}
+			if (incognito) {
+				edgeOptions.addArguments("--inprivate");
+			}
 			break;
-			
+
 //		default:  // if nothing is there of it is 
 //			//       unable to read and perform default is set to chrome.
 //			WebDriverManager.chromedriver().setup();
@@ -65,7 +70,9 @@ public class BaseSteps {
 //			driver=new ChromeDriver(defaultChromeOptions);
 //			break;
 		}
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	driver.get(url);
-	}	
+		
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get(url);
+	}
 }

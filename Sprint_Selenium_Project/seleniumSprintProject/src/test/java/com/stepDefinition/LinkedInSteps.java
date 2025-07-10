@@ -1,10 +1,10 @@
 package com.stepDefinition;
 
 
-import java.util.List;
+
 import java.util.Map;
 
-import org.junit.Assert;
+
 
 import com.pages.AccPreferancePageFac;
 import com.pages.HomePageFac;
@@ -85,7 +85,6 @@ public class LinkedInSteps {
 	@When("User selects the Jobs filter")
 	public void user_selects_the_jobs_filter() throws InterruptedException {
 		searchPageFac.applyFilter();
-	
 	}
 	
 	@Then("At least one job should appear in the result")

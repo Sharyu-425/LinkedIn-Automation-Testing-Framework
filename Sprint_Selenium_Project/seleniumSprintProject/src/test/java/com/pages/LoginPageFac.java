@@ -12,8 +12,20 @@ public class LoginPageFac extends BasePage {
 	WebElement passField;
 	@FindBy(css ="button[class=\"btn__primary--large from__button--floating\"]")
 	WebElement loginBtn;
-//	@FindBy(css="button[class=\"sc-nkuzb1-0 sc-d5trka-0 eZxMRy button\"]")
-//	WebElement startPuzzleBtn;
+	@FindBy(xpath="//button[text()=\"Start Puzzle\"]")
+	WebElement startPuzzleBtn;
+	
+//--------------frames for start puzzle------------------------
+	@FindBy(xpath="//iframe[@id=\"captcha-internal\"]")
+	WebElement iframe_0;
+	@FindBy(xpath="//iframe[@id=\"arkoseframe\"]")
+	WebElement iframe_1;
+	@FindBy(xpath="//iframe[@title=\"Verification challenge\"]")
+	WebElement iframe_2;
+	@FindBy(xpath="//iframe[@id=\"game-core-frame\"]")
+	WebElement iframe_3;
+//--------------------------------------------------------------
+
 
 	
 	public LoginPageFac(WebDriver driver) {
@@ -24,10 +36,14 @@ public class LoginPageFac extends BasePage {
 		sendKeys(userField,username);
 		sendKeys(passField,password);
 		loginBtn.click();
-//		waitForElement(startPuzzleBtn);
-//		startPuzzleBtn.click();
+		driver.switchTo().frame(iframe_0);
+		driver.switchTo().frame(iframe_1);
+		driver.switchTo().frame(iframe_2);
+		driver.switchTo().frame(iframe_3);
+		click(startPuzzleBtn);
+		driver.switchTo().defaultContent();
+		Thread.sleep(13000);
 		
-		Thread.sleep(10000);
 	}
 	public void isHomepage() {
 		assertURL("feed","Feed page not displayed after login");
