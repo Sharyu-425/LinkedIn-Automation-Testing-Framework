@@ -28,7 +28,7 @@ import org.testng.Assert;
 public class Messaging extends BaseSteps {
 
    WebDriver driver=getDriver();
-   MessagingPage msgPage; 
+   MessagingPage msgPage=new MessagingPage(driver); 
  
     
     
@@ -49,7 +49,7 @@ public class Messaging extends BaseSteps {
 	 */
     @When("user checks for messaging icon")
     public void user_checks_for_messaging_icon() {
-       msgPage=new MessagingPage(getDriver());
+      
        Assert.assertTrue(msgPage.isMessagingIconVisible(),"Messaging icon is not visible");
     }
     @Then("Messaging icon should be visible")
@@ -73,7 +73,6 @@ public class Messaging extends BaseSteps {
     }
     @Then("messaging window should be open")
     public void messaging_window_should_be_open() {
-    	
     	Assert.assertTrue(msgPage.isMessagingWindowVisible(),"Messaging window is not visible");
           
     }
@@ -187,7 +186,24 @@ public class Messaging extends BaseSteps {
     }
     
    
-    
+    @When("user is on messaging window panel")
+    public void user_is_on_messaging_window_panel() {
+       msgPage.clickMessagingIcon();
+    }
+    @When("user searches invalid names from excel:")
+    public void user_searches_invalid_names_from_excel(io.cucumber.datatable.DataTable dataTable) throws Exception {
+    	List<List<String>> data = dataTable.asLists();
+    	String fileName=data.get(0).get(0);
+        String sheetName=data.get(0).get(1);
+        int recordCount=Integer.parseInt(data.get(0).get(2));
+        int startRow=14;
+        for(int i=startRow;i<startRow+recordCount;i++) {
+        	String invalidData=ExcelReader.getCellValue(sheetName, i, 0);
+        			msgPage.searchMessage(invalidData);
+        
+    }
+   }
+ 
     
     
     

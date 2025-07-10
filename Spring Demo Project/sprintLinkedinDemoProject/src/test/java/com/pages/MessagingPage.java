@@ -65,6 +65,7 @@ public class MessagingPage {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 		wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+	
 	}
 	
 //-------------------Messaging icon visibility---------------------------------------------------//	
@@ -233,6 +234,13 @@ public class MessagingPage {
 		wait.until(ExpectedConditions.visibilityOf(messageSearchBox)).clear();
 		messageSearchBox.sendKeys(name + Keys.ENTER);
 		Thread.sleep(1000);
+	}
+	
+	
+	public void searchMessageswithInvalidData(String invalidData) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.visibilityOf(messageSearchBox)).clear();
+		messageSearchBox.sendKeys(invalidData + Keys.ENTER);
 	}
 	
 	

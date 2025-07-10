@@ -1,18 +1,18 @@
 package com.runner;
 
-import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.AbstractTestNGCucumberTests; //base class to run cucumber using testNG
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
     features = "src/test/resources/Features",        // Path to feature files
     glue = {"com.stepDefinition"}, 
     // Step definition package
-   tags="@tc02",
+    tags="@tc_negative",
     plugin = {
-        "pretty",
+        "pretty",                                     //console output
         "html:target/CucumberReport5.html",           // HTML report
-        "json:target/cucumber.json",
-        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+        "json:target/cucumber.json",                  //json report
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  //this is for extent report
     }
 )
 

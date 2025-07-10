@@ -3,12 +3,11 @@ package com.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import com.setup.BaseSteps;
 
-public class LoginPage extends BaseSteps {
 
-    WebDriver driver;
+public class LoginPage extends BaseSteps {
+      WebDriver driver;
 
     // Constructor to access driver
     public LoginPage(WebDriver driver) {

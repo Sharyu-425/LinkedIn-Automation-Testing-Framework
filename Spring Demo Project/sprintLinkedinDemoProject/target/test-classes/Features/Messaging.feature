@@ -32,6 +32,11 @@ Feature: MessagingModule
    When user is on messaging window
    And user search for following names:
    |Data.xlsx|Sheet1|2|
+   @tc_negative
+   Scenario: Search with invalid special characters in messaging panel
+   When user is on messaging window panel
+   And user searches invalid names from excel:
+   |Data.xlsx|Sheet1|2|
    @tc06
    Scenario: Expand Linkedin messaging panel from minimized state
    When user is on messaging the window
