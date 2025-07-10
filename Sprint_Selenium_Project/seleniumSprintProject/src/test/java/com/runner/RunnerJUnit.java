@@ -12,10 +12,11 @@ plugin= {
 		"pretty",
 },
 monochrome=true,
-tags="@TS_LinkedIn_05")
+tags="@TS_LinkedIn_02")
+//,plugin=)
 public class RunnerJUnit {
+
 	
 }
 
 
-////span[text()="It appears that this post has already been shared. Please edit your draft."]

@@ -20,6 +20,8 @@ public class HomePageFac extends BasePage{
 	WebElement duplicatePostErr;
 	@FindBy(xpath="//nav[@class=\"global-nav__nav\"]/descendant::li[6]")
 	WebElement profileDropdown;
+	@FindBy(linkText="Settings & Privacy")
+	WebElement settingBtn;
 	
 	
 	
@@ -27,7 +29,7 @@ public class HomePageFac extends BasePage{
 		super(driver);
 	}
 	
-	//----------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------
 	public void clickCreatePost() {
 		click(createPostBtn);
 	}
@@ -41,17 +43,19 @@ public class HomePageFac extends BasePage{
 		assertElementText(postSuccessPopup,"Post successful.","Error is Posting your Post");
 		click(viewPostBtn);
 	}
-	//------------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------
 	public void isDuplicateErrorDisplayed() {
 		assertElementText(duplicatePostErr,"It appears that this post has already been shared. Please edit your draft.","Duplicate Error was not displayed");
 	}
 	
-	//--------------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------------
 	
 	public void goToSettings() {
 		click(profileDropdown);
-		robotClick(745, 405);
+		click(settingBtn);	
 	}
+	
+//-------------------------------------------------------------------------------------------------------
 	
 
 	
