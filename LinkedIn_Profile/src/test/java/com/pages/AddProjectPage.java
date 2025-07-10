@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class AddProjectPage extends BasePage {
-    WebDriver driver;
     Actions action;
     JavascriptExecutor js;
 
@@ -59,7 +58,6 @@ public class AddProjectPage extends BasePage {
 
     public AddProjectPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         this.action = new Actions(driver);
         this.js = (JavascriptExecutor) driver;
     }

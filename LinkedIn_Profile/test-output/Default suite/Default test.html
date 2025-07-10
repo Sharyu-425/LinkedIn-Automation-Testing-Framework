@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 09 22:12:06 IST 2025</td>
+<td>Started on:</td><td>Thu Jul 10 14:32:10 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>377 seconds (377131 ms)</td>
+<tr><td>Total time:</td><td>299 seconds (299607 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,24 +76,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add profile section and its fields with valid data", "Validate LinkedIn Profile"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //textarea[@id=&apos;gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary&apos;]&apos; (tried for 8 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.pages.BasePage.waitUntilElementIsClickable(BasePage.java:30)
-	at com.pages.AddAboutPage.addAboutValid(AddAboutPage.java:41)
-	at com.stepdefinition.LinkedInTest.user_enters_valid_data_in_about_field_using_datatable(LinkedInTest.java:110)
-	at ✽.user enters valid data in about field using datatable(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:44)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//textarea[@id=&apos;gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary&apos;]&quot;}
+<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add projects field in Add profile section", "Validate LinkedIn Profile"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.pv-goals__section-button&quot;}
   (Session info: MicrosoftEdge=138.0.3351.77)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [bb49ac53fa2c3fb418015920037efcbe, findElement {value=//textarea[@id=&apos;gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57186}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57186/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bb49ac53fa2c3fb418015920037efcbe
-	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+Command: [76b282f832ebdbdb7537b36bb7c24ba8, findElement {using=css selector, value=.pv-goals__section-button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61693}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61693/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76b282f832ebdbdb7537b36bb7c24ba8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -110,32 +104,22 @@ Session ID: bb49ac53fa2c3fb418015920037efcbe
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 4 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace948963537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace948963537'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator &apos;By.xpath: //textarea[@id=&apos;gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary&apos;]&apos; (tried for 8 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.pages.BasePage.waitUntilElementIsClickable(BasePage.java:30)
-	at com.pages.AddAboutPage.addAboutValid(AddAboutPage.java:41)
-	at com.stepdefinition.LinkedInTest.user_enters_valid_data_in_about_field_using_datatable(LinkedInTest.java:110)
-	at ✽.user enters valid data in about field using datatable(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:44)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//textarea[@id=&apos;gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary&apos;]&quot;}
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at com.pages.ProfilePage.recommendedDropdown(ProfilePage.java:81)
+	at com.stepdefinition.LinkedInTest.user_clicks_on_recommended_dropdown(LinkedInTest.java:140)
+	at ✽.user clicks on recommended dropdown(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:54)
+</pre></div><a href='#' onClick='toggleBox("stack-trace322981749", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace322981749'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.pv-goals__section-button&quot;}
   (Session info: MicrosoftEdge=138.0.3351.77)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [bb49ac53fa2c3fb418015920037efcbe, findElement {value=//textarea[@id=&apos;gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57186}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57186/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bb49ac53fa2c3fb418015920037efcbe
-	at jdk.internal.reflect.GeneratedConstructorAccessor25.newInstance(Unknown Source)
+Command: [76b282f832ebdbdb7537b36bb7c24ba8, findElement {using=css selector, value=.pv-goals__section-button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:61693}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61693/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76b282f832ebdbdb7537b36bb7c24ba8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
@@ -152,16 +136,80 @@ Session ID: bb49ac53fa2c3fb418015920037efcbe
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy25.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	... 4 more
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at com.pages.ProfilePage.recommendedDropdown(ProfilePage.java:81)
+	at com.stepdefinition.LinkedInTest.user_clicks_on_recommended_dropdown(LinkedInTest.java:140)
+	at ✽.user clicks on recommended dropdown(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:54)
 </pre></div></td>
-<td>64</td>
+<td>33</td>
+<td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
+<tr>
+<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add volunteer experience in Add profile section", "Validate LinkedIn Profile"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.pv-goals__section-button&quot;}
+  (Session info: MicrosoftEdge=138.0.3351.77)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [88a5c18a6288fbbc6655f31a462e45bd, findElement {using=css selector, value=.pv-goals__section-button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62089}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62089/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 88a5c18a6288fbbc6655f31a462e45bd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at com.pages.ProfilePage.additionalDropdown(ProfilePage.java:91)
+	at com.stepdefinition.LinkedInTest.user_clicks_on_additional_dropdown(LinkedInTest.java:165)
+	at ✽.user clicks on additional dropdown(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:65)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1557602018", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1557602018'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.pv-goals__section-button&quot;}
+  (Session info: MicrosoftEdge=138.0.3351.77)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.15&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [88a5c18a6288fbbc6655f31a462e45bd, findElement {using=css selector, value=.pv-goals__section-button}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62089}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62089/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 88a5c18a6288fbbc6655f31a462e45bd
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at com.pages.ProfilePage.additionalDropdown(ProfilePage.java:91)
+	at com.stepdefinition.LinkedInTest.user_clicks_on_additional_dropdown(LinkedInTest.java:165)
+	at ✽.user clicks on additional dropdown(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:65)
+</pre></div></td>
+<td>36</td>
 <td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -175,27 +223,22 @@ Session ID: bb49ac53fa2c3fb418015920037efcbe
 <tr>
 <td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate edit intro icon and its fields with invalid data", "Validate LinkedIn Profile"</td>
 <td></td>
-<td>50</td>
-<td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
-<tr>
-<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate edit intro icon and its fields with valid data", "Validate LinkedIn Profile"</td>
-<td></td>
-<td>43</td>
-<td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
-<tr>
-<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add volunteer experience in Add profile section", "Validate LinkedIn Profile"</td>
-<td></td>
-<td>52</td>
-<td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
-<tr>
-<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add projects field in Add profile section", "Validate LinkedIn Profile"</td>
-<td></td>
-<td>69</td>
+<td>40</td>
 <td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
 <tr>
 <td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add profile section and its fields with invalid data", "Validate LinkedIn Profile"</td>
 <td></td>
-<td>95</td>
+<td>92</td>
+<td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
+<tr>
+<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Add profile section and its fields with valid data", "Validate LinkedIn Profile"</td>
+<td></td>
+<td>56</td>
+<td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
+<tr>
+<td title='com.runner.LinkedInRunnerWithTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.LinkedInRunnerWithTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate edit intro icon and its fields with valid data", "Validate LinkedIn Profile"</td>
+<td></td>
+<td>39</td>
 <td>com.runner.LinkedInRunnerWithTestNG@15888343</td></tr>
 </table><p>
 </body>

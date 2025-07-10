@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class EditIntroPage extends BasePage{
-	WebDriver driver;
 	
 	@FindBy(css = "#single-line-text-form-component-profileEditFormElement-TOP-CARD-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-firstName")
 	WebElement firstnameField;

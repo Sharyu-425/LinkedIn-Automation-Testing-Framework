@@ -1,0 +1,1146 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 10, 2025 09:53:28 am</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@ValidIntro</a><a class="dropdown-item" href="#">@InvalidUserAbout</a><a class="dropdown-item" href="#">@InvalidIntro</a><a class="dropdown-item" href="#">@VolExp</a><a class="dropdown-item" href="#">@linkedinProfile</a><a class="dropdown-item" href="#">@Project</a><a class="dropdown-item" href="#">@ValidUserAbout</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Validate LinkedIn Profile</p>
+            <p class="text-sm">
+              <span>9:53:29 am</span> / <span>00:05:06:131</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Validate LinkedIn Profile</h5>
+<span class='badge badge-success'>07.10.2025 9:53:29 am</span>
+<span class='badge badge-danger'>07.10.2025 9:58:35 am</span>
+<span class='badge badge-default'>00:05:06:131</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validate edit intro icon and its fields with invalid data</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Validate edit intro icon and its fields with invalid data</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is logged in</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks on profile</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on edit intro icon</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters invalid "00" and "10" fields</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then it should give error message</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>com.stepdefinition.LinkedInTest.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./Screenshots/embedded1.png' src="./Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Validate edit intro icon and its fields with valid data</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Validate edit intro icon and its fields with valid data</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given user is logged in</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When user clicks on profile</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on edit intro icon</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user enters valid "20" and "30" fields</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And user clicks on save button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then it should navigate us to profile page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>com.stepdefinition.LinkedInTest.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./Screenshots/embedded2.png' src="./Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Validate Add profile section and its fields with invalid data</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_is_logged_in()">
+                <span>Given user is logged in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_profile()">
+                <span>When user clicks on profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_profile_section_button()">
+                <span>And user clicks on add profile section button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_about_button()">
+                <span>And user clicks on add about button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_enters_invalid_data_in_about_field_using_datatable(io.cucumber.datatable.DataTable)">
+                <span>And user enters invalid data in about field using datatable</span>
+      <div><table class='markup-table table '><tr><td>FormData.xlsx</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_save_button()">
+                <span>And user clicks on save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.it_should_display_an_error_message()">
+                <span>Then it should display an error message</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.stepdefinition.LinkedInTest.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./Screenshots/embedded3.png' src="./Screenshots/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="29"><span class="badge log fail-bg mr-2">Fail</span>Validate Add profile section and its fields with valid data</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="com.stepdefinition.LinkedInTest.user_is_logged_in()">
+                <span>Given user is logged in</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".nav__button\-secondary"}
+  (Session info: MicrosoftEdge=138.0.3351.77)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.15'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [53d3323c160cddbc7c3908b7fc01b4b4, findElement {value=nav__button-secondary, using=class name}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.77, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:49736}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\SHRAWSHI\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49736/devtoo..., se:cdpVersion: 138.0.3351.77, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 53d3323c160cddbc7c3908b7fc01b4b4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.pages.LoginPage.signinbtn(LoginPage.java:40)
+	at com.stepdefinition.LinkedInTest.user_is_logged_in(LinkedInTest.java:45)
+	at ✽.user is logged in(file:///C:/Windows/System32/config/systemprofile/eclipse-workspace/LinkedInProject/LinkedIn_Profile/src/test/resource/Feature/LinkedInProfile.feature:5)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_profile()">
+                <span>When user clicks on profile</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_profile_section_button()">
+                <span>And user clicks on add profile section button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_about_button()">
+                <span>And user clicks on add about button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.stepdefinition.LinkedInTest.user_enters_valid_data_in_about_field_using_datatable(io.cucumber.datatable.DataTable)">
+                <span>And user enters valid data in about field using datatable</span>
+      <div><table class='markup-table table '><tr><td>FormData.xlsx</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_save_button()">
+                <span>And user clicks on save button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.stepdefinition.LinkedInTest.about_section_is_updated()">
+                <span>Then about section is updated</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.stepdefinition.LinkedInTest.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./Screenshots/embedded4.png' src="./Screenshots/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="38"><span class="badge log pass-bg mr-2">Pass</span>Validate Add projects field in Add profile section</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_is_logged_in()">
+                <span>Given user is logged in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_profile()">
+                <span>When user clicks on profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_profile_section_button()">
+                <span>And user clicks on add profile section button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_recommended_dropdown()">
+                <span>And user clicks on recommended dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_projects_button()">
+                <span>And user clicks on add projects button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_enters_valid_data_in_required_fields_using_datatable(io.cucumber.datatable.DataTable)">
+                <span>And user enters valid data in required fields using datatable</span>
+      <div><table class='markup-table table '><tr><td>FormData.xlsx</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_save_button()">
+                <span>And user clicks on save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.a_new_project_is_added_in_users_profile()">
+                <span>Then a new project is added in users profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.stepdefinition.LinkedInTest.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./Screenshots/embedded5.png' src="./Screenshots/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="48"><span class="badge log pass-bg mr-2">Pass</span>Validate Add volunteer experience in Add profile section</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_is_logged_in()">
+                <span>Given user is logged in</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_profile()">
+                <span>When user clicks on profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_profile_section_button()">
+                <span>And user clicks on add profile section button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_additional_dropdown()">
+                <span>And user clicks on additional dropdown</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_add_volunteer_experience_button()">
+                <span>And user clicks on add volunteer experience button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_enters_valid_data_in_fields_using_datatable(io.cucumber.datatable.DataTable)">
+                <span>And user enters valid data in fields using datatable</span>
+      <div><table class='markup-table table '><tr><td>FormData.xlsx</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.user_clicks_on_save_button()">
+                <span>And user clicks on save button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.stepdefinition.LinkedInTest.a_new_volunteer_experience_is_added_in_users_profile()">
+                <span>Then a new volunteer experience is added in users profile</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>com.stepdefinition.LinkedInTest.tearDown(io.cucumber.java.Scenario)</span>
+      <div>Image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='./Screenshots/embedded6.png' src="./Screenshots/embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:56:24 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='30'>Given user is logged in</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add profile section and its fields with valid data.Given user is logged in</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">7</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ValidIntro</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidIntro</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:14 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='12'>Validate edit intro icon and its fields with valid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate edit intro icon and its fields with valid data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@InvalidUserAbout</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@InvalidUserAbout</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:57 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='20'>Validate Add profile section and its fields with invalid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add profile section and its fields with invalid data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@InvalidIntro</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@InvalidIntro</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:53:29 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Validate edit intro icon and its fields with invalid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate edit intro icon and its fields with invalid data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@VolExp</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@VolExp</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:57:43 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Validate Add volunteer experience in Add profile section</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add volunteer experience in Add profile section</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@linkedinProfile</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@linkedinProfile</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:53:29 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Validate edit intro icon and its fields with invalid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate edit intro icon and its fields with invalid data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:14 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='12'>Validate edit intro icon and its fields with valid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate edit intro icon and its fields with valid data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:54:57 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='20'>Validate Add profile section and its fields with invalid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add profile section and its fields with invalid data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:56:24 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Validate Add profile section and its fields with valid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add profile section and its fields with valid data</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:29 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='38'>Validate Add projects field in Add profile section</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add projects field in Add profile section</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:57:43 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='48'>Validate Add volunteer experience in Add profile section</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add volunteer experience in Add profile section</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Project</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Project</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>09:56:29 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='38'>Validate Add projects field in Add profile section</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add projects field in Add profile section</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ValidUserAbout</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ValidUserAbout</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>09:56:24 am</td>
+<td>
+<a href="#" class="linked" test-id='1' id='29'>Validate Add profile section and its fields with valid data</a>
+<div class="">
+<span class="badge badge-default">Validate LinkedIn Profile.Validate Add profile section and its fields with valid data</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 10, 2025 09:53:28 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 10, 2025 09:58:35 am</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='83%'><b>5</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='16%'><b>1</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='85%'><b>41</b> steps passed</small></div>
+<div>
+<small data-tooltip='2%'><b>1</b> steps failed,
+<b>6</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Validate LinkedIn Profile":306.131
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@ValidIntro</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@InvalidUserAbout</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@InvalidIntro</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@VolExp</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@linkedinProfile</td>
+<td>5</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>83.333%</td>
+</tr>
+<tr>
+<td>@Project</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ValidUserAbout</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>Eclipse</td>
+</tr>
+<tr>
+<td>user</td>
+<td>shrawshi</td>
+</tr>
+<tr>
+<td>build</td>
+<td>windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 5,
+failChild: 1,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 41,
+failGrandChild: 1,
+warningGrandChild: 0,
+skipGrandChild: 6,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

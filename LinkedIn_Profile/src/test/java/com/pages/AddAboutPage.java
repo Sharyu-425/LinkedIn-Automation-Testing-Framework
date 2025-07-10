@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddAboutPage extends BasePage {
-    WebDriver driver;
     Actions action;
     
     @FindBy(xpath ="//textarea[@id='gai-text-form-component-profileEditFormElement-SUMMARY-profile-ACoAAD-ezrEBBg2rc9JVoInotAHvukqigQez-tE-summary']")
@@ -33,7 +32,6 @@ public class AddAboutPage extends BasePage {
 
     public AddAboutPage(WebDriver driver) {
         super(driver);
-        this.driver = driver;
         this.action = new Actions(driver);
     }
     

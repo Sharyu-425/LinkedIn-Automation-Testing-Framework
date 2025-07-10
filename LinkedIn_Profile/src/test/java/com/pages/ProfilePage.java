@@ -17,7 +17,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProfilePage extends BasePage{
-	WebDriver driver;
 	Actions action;
 	JavascriptExecutor js;
 	
@@ -41,8 +40,7 @@ public class ProfilePage extends BasePage{
     
 	public ProfilePage(WebDriver driver) {
 		super(driver);
-        this.driver = driver;
-        this.action = new Actions(driver);
+		this.action = new Actions(driver);
         this.js =(JavascriptExecutor) driver;
 	}
 	
