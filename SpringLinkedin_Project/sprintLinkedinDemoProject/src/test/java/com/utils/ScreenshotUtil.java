@@ -12,10 +12,6 @@ public class ScreenshotUtil {
 
     public static String takeScreenshot(WebDriver driver, String prefix) {
         try {
-            // Create screenshots directory if it doesn't exist
-//            File screenshotDir = new File("/screenshots");
-//            if (!screenshotDir.exists()) {
-//                screenshotDir.mkdirs();
 
 // Save to project root /screenshot
         	String screenshotPath = System.getProperty("user.dir") + "/screenshot";
@@ -36,7 +32,7 @@ public class ScreenshotUtil {
 
             // Save file
             FileUtils.copyFile(src, dest);
-            System.out.println("📸 Screenshot saved at: " + dest.getAbsolutePath());
+            System.out.println("Screenshot saved at: " + dest.getAbsolutePath());
             return dest.getAbsolutePath();
 
         } catch (IOException e) {
