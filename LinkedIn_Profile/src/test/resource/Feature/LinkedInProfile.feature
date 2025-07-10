@@ -1,3 +1,4 @@
+@linkedinProfile
 Feature: Validate LinkedIn Profile
  
 Background:

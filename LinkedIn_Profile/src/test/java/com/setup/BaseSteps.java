@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseSteps {
@@ -15,29 +16,28 @@ public class BaseSteps {
 	public static EdgeOptions eoptions;
 	
 	public static WebDriver chromedriver() {
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().setup(); // Auto-setup ChromeDriver
 		coptions = new ChromeOptions();
-		coptions.addArguments("--start-maxmized");
+		coptions.addArguments("--start-maximized");
 	//	coptions.addArguments("Incognite");
 		coptions.addArguments("disable-notifications");
 		
-		driver = new ChromeDriver(coptions);
-		driver.get("https://www.linkedin.com/");
-		driver.manage().window().maximize();
+		driver = new ChromeDriver(coptions); // Launch Chrome with options
+		driver.get("https://www.linkedin.com");
+		driver.manage().window().maximize(); // Ensure window is maximized 
 		return driver;
-		
 	}
 	
 	public static WebDriver edgedriver() {
-		WebDriverManager.edgedriver().setup();
+		WebDriverManager.edgedriver().setup(); // Auto-setup EdgeDriver
 		eoptions = new EdgeOptions();
-		eoptions.addArguments("--start-maxmized");
+		eoptions.addArguments("--start-maximized");
 	//	eoptions.addArguments("Incognite");
 		eoptions.addArguments("disable-notifications");
 		
-		driver = new EdgeDriver(eoptions);
+		driver = new EdgeDriver(eoptions); // Launch Edge with options
 		driver.get("https://www.linkedin.com/");
-		driver.manage().window().maximize();
+		driver.manage().window().maximize(); // Ensure window is maximized 
 		return driver;
 		
 	}

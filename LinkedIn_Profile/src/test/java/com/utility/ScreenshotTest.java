@@ -46,7 +46,7 @@ public class ScreenshotTest {
 	}
 	*/
 	public static String timestamp() {
-		return new SimpleDateFormat("yyyy-mm-dd HH-mm-ss").format(new Date());
+		return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());
 	}
 	
 	

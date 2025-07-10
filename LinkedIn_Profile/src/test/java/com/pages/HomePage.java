@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage{
 	
-	WebDriver driver;
-
    @FindBy(css = ".profile-card-name.text-heading-large")
    WebElement profilebtn;
 

@@ -5,9 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import com.parameters.PropertyFileReader;
+
 public class LoginPage extends BasePage{
 	
-	WebDriver driver;
+	PropertyFileReader fileReader;
+	 
 	@FindBy(id = "username")
 	WebElement username;
 	
@@ -23,11 +26,13 @@ public class LoginPage extends BasePage{
     
 	public LoginPage(WebDriver driver) {
 		super(driver);
+		fileReader=new PropertyFileReader("C:\\Windows\\System32\\config\\systemprofile\\eclipse-workspace\\LinkedInProject\\LinkedIn_Profile\\src\\test\\resource\\PropertiesFiles\\data.properties");
+		 
 	}
 	
 	public void typeData() {
-		username.sendKeys("shravnishinde1308@gmail.com");
-		password.sendKeys("Password@1302");
+		username.sendKeys((fileReader.getProperty("username")));
+		password.sendKeys((fileReader.getProperty("password")));
 	}
 	public void signinbtn() {
 		signin.click();
@@ -36,7 +41,7 @@ public class LoginPage extends BasePage{
 	public void clickbtn(){
 		logbtn.click();
 		try {
-			Thread.sleep(30000);
+			Thread.sleep(20000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
