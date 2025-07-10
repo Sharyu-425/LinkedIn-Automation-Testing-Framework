@@ -42,15 +42,15 @@ public class WithdrawRequestPage {
             WebElement showAll = waitToBeClickable(By.xpath("//a[@aria-label='Show all invitations']"));
             scrollToElement(showAll);
             showAll.click();
-            System.out.println("✅ Clicked on 'Show all invitations'");
+            System.out.println("Clicked on 'Show all invitations'");
 
             WebElement sentTab = waitToBeClickable(By.xpath("//span[contains(text(),'Sent') or contains(text(),'sent')]"));
             scrollToElement(sentTab);
             sentTab.click();
-            System.out.println("✅ Clicked on 'Sent' tab");
+            System.out.println(" Clicked on 'Sent' tab");
             Thread.sleep(2000);
         } catch (Exception e) {
-            System.out.println("❌ Error opening Sent Invitations: " + e.getMessage());
+            System.out.println(" Error opening Sent Invitations: " + e.getMessage());
         }
     }
 
@@ -59,14 +59,14 @@ public class WithdrawRequestPage {
             WebElement showAll = waitToBeClickable(By.xpath("//a[@aria-label='Show all invitations']"));
             scrollToElement(showAll);
             showAll.click();
-            System.out.println("✅ Clicked on 'Show all invitations'");
+            System.out.println("Clicked on 'Show all invitations'");
 
             WebElement receivedTab = waitToBeClickable(By.xpath("//span[contains(text(),'Received') or contains(text(),'received')]"));
             scrollToElement(receivedTab);
             receivedTab.click();
-            System.out.println("✅ Clicked on 'Received' tab");
+            System.out.println(" Clicked on 'Received' tab");
         } catch (Exception e) {
-            System.out.println("❌ Error opening Received Invitations: " + e.getMessage());
+            System.out.println(" Error opening Received Invitations: " + e.getMessage());
         }
     }
 
@@ -77,7 +77,7 @@ public class WithdrawRequestPage {
             WebElement withdrawBtn = waitForElement(By.xpath("(//button[@data-view-name='sent-invitations-withdraw-single'])[1]"));
             return withdrawBtn.isDisplayed();
         } catch (Exception e) {
-            System.out.println("❌ Withdraw button not visible: " + e.getMessage());
+            System.out.println("Withdraw button not visible: " + e.getMessage());
             return false;
         }
     }
@@ -87,9 +87,9 @@ public class WithdrawRequestPage {
             WebElement withdrawBtn = waitToBeClickable(By.xpath("(//button[@data-view-name='sent-invitations-withdraw-single'])[1]"));
             scrollToElement(withdrawBtn);
             withdrawBtn.click();
-            System.out.println("✅ Clicked on Withdraw");
+            System.out.println(" Clicked on Withdraw");
         } catch (Exception e) {
-            System.out.println("❌ Could not click Withdraw: " + e.getMessage());
+            System.out.println("Could not click Withdraw: " + e.getMessage());
         }
     }
 
@@ -97,19 +97,19 @@ public class WithdrawRequestPage {
         try {
             WebElement confirmBtn = waitToBeClickable(By.xpath("//button[normalize-space()='Withdraw' and not(@data-view-name)]"));
             confirmBtn.click();
-            System.out.println("✅ Confirmed Withdraw in modal");
+            System.out.println(" Confirmed Withdraw in modal");
         } catch (Exception e) {
-            System.out.println("❌ Could not confirm Withdraw in modal: " + e.getMessage());
+            System.out.println(" Could not confirm Withdraw in modal: " + e.getMessage());
         }
     }
 
     public boolean isWithdrawSuccessMessageVisible() {
         try {
             WebElement message = waitForElement(By.xpath("//*[contains(text(),'Invitation to') and contains(text(),'withdrawn')]"));
-            System.out.println("✅ Success message displayed: " + message.getText());
+            System.out.println(" Success message displayed: " + message.getText());
             return true;
         } catch (Exception e) {
-            System.out.println("⚠️ Success message not found: " + e.getMessage());
+            System.out.println(" Success message not found: " + e.getMessage());
             return false;
         }
     }
@@ -132,12 +132,12 @@ public class WithdrawRequestPage {
                 WebElement firstAccept = acceptButtons.get(0);
                 scrollToElement(firstAccept);
                 wait.until(ExpectedConditions.elementToBeClickable(firstAccept)).click();
-                System.out.println("✅ Clicked Accept on first request");
+                System.out.println(" Clicked Accept on first request");
             } else {
-                System.out.println("❌ No Accept buttons found");
+                System.out.println(" No Accept buttons found");
             }
         } catch (Exception e) {
-            System.out.println("❌ Could not click Accept: " + e.getMessage());
+            System.out.println(" Could not click Accept: " + e.getMessage());
         }
     }
 
@@ -148,12 +148,12 @@ public class WithdrawRequestPage {
                 WebElement lastIgnore = ignoreButtons.get(ignoreButtons.size() - 1);
                 scrollToElement(lastIgnore);
                 wait.until(ExpectedConditions.elementToBeClickable(lastIgnore)).click();
-                System.out.println("✅ Clicked Ignore on last request");
+                System.out.println("Clicked Ignore on last request");
             } else {
-                System.out.println("❌ No Ignore buttons found");
+                System.out.println("No Ignore buttons found");
             }
         } catch (Exception e) {
-            System.out.println("❌ Could not click Ignore: " + e.getMessage());
+            System.out.println(" Could not click Ignore: " + e.getMessage());
         }
     }
 }
